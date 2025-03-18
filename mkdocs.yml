@@ -1,14 +1,42 @@
 site_name: 「寻寰」设定站
+site_url: https://blog.uchout.moe/xunhuan-doc/
+site_description: >-
+  「寻寰」游戏设定站，为了更好的开发游戏而设定。
+
 theme:
   name: material
   language: zh
   features:
-    - navigation.tabs
-    - navigation.sections
-    - search.highlight
-    - content.code.copy
+   - header.autohide
+   - navigation.tracking
+   - navigation.top
+   - search.highlight
+   - search.share
+   - search.suggest
+   - content.code.annotate
+  palette: 
+     
+   # Palette toggle for light mode
+   - scheme: default
+     toggle:
+       icon: material/brightness-7 
+       name: Switch to dark mode
+       primary: cyan
+       accent: cyan
+
+   # Palette toggle for dark mode
+   - scheme: slate
+     toggle:
+       icon: material/brightness-4
+       name: Switch to light mode
+       primary: cyan
+       accent: cyan
+
+  font:
+    text: Ubuntu
+
 repo_url: https://github.com/uchouT/xunhuan-doc
-edit_uri: edit/main/docs/
+
 
 nav:
   - 主页: index.md
@@ -16,4 +44,5 @@ nav:
       - 世界观: game/lore.md
       - 角色介绍: game/characters.md
       - 怪物: game/monsters.md
+      
 
