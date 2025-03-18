@@ -1,0 +1,11 @@
+site_name: 「寻寰」设定站
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+    - content.code.copy
+repo_url: https://github.com/uchouT/xunhuan-doc
+edit_uri: edit/main/docs/
