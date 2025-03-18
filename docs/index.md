@@ -13,10 +13,7 @@
 
 ### 前提
 
-1. 首先你要会使用 markdown 编辑，参考：[link](https://markdown.com.cn/basic-syntax/)。会基础编辑就够了，另外 gcd 可能要学会插入表格？
-
-或者可以使用 Typora 来编辑 markdown 文件。我站里有破解版：[link](https://drive.uchout.moe/d/App/typora_64bit_v1.9.5_setup.rar)
-
+1. 首先你要会使用 markdown 编辑，参考：[link](https://markdown.com.cn/basic-syntax/)。会基础编辑就够了，另外 gcd 可能要学会插入表格? 或者可以使用 Typora 来编辑 markdown 文件。我站里有破解版：[link](https://drive.uchout.moe/d/App/typora_64bit_v1.9.5_setup.rar)
 2. 有一个 GitHub 账号，并且告诉我用户名，我来添加推送权限。
 
 ### 1. 克隆仓库
@@ -27,7 +24,7 @@
 ```bash
 git clone git@github.com:uchouT/xunhuan-doc.git
 ```
-这步操作只需要在第一次初始化时执行，之后都是在当前目录运行 `git pull origin main` 进行拉去。
+这步操作只需要在第一次初始化时执行，之后都是在当前目录运行 `git pull origin main` 进行拉取。
 
 然后在项目中的 /docs 文件夹中即可找到 markdown 文件进行编辑，侧栏的导航菜单在 `mkdocs.yml` 中编辑。
 
@@ -38,6 +35,13 @@ git clone git@github.com:uchouT/xunhuan-doc.git
 
 我在 main 分支设置了 GitHub Action，可以自动部署，因此不需要手动修改 gh-deploy 分支。
 
-所以很简单，在写作完成之后，运行 `git push origin main` 即可。等待大概一分钟，新的网页就会被部署。可能要 `ctrl + F5` 刷新后才能看到更改。 
+所以很简单，在写作完成之后，提交当前修改并推送到仓库 main 分支即可：
+先在你克隆的下来的仓库路径 (不是 /docs 这个目录，是整个仓库的根目录) 打开 git-bash，然后运行：
+```bash
+git add .
+git commit -m "更新消息提示，可以描述一下此次提交做了什么修改"
+git push origin main
+```
+等待大概一分钟，新网页就部署完了。可能要 `ctrl + F5` 刷新后才能看到更改。 
 
 没有设置 ssh 密钥的话要先设置，在电脑 (windows) 的 `C:\Users\你的用户名\.ssh` 路径找找有没有 `id_rsa.pub` 或者类似 `*.pub` 的文件。如果没有的话，打开 git-bash，输入 `ssh-keygen -t rsa -b 4096 -C "你的邮箱@example.com"` 生成一下，然后将 `.pub` 文件中的内容添加到 GitHub 账号中：[New SSH Key](https://github.com/settings/keys)
