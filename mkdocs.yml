@@ -9,3 +9,10 @@ theme:
     - content.code.copy
 repo_url: https://github.com/uchouT/xunhuan-doc
 edit_uri: edit/main/docs/
+
+nav:
+  - 主页: index.md
+  - 游戏设定:
+      - 世界观: game/lore.md
+      - 角色介绍: game/characters.md
+
