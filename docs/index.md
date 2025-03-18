@@ -23,12 +23,14 @@
 
 在本地安装 [Git](https://git-scm.com/downloads), 然后克隆本仓库的 main 分支到本地，然后在项目中的 /docs 文件夹中即可找到 markdown 文件进行编辑~
 
-另外，在每次编辑之前，推荐先运行 `git pull origin main` ， 将远程仓库拉取到本地，以防止有人做了文档修改而本地没有及时更新。
+**WARNING：**在每次编辑之前，先运行 `git pull origin main` ， 将远程仓库拉取到本地，以防止有人做了文档修改而本地没有及时更新。
 
-侧栏的导航菜单在 mkdocs.yml 中编辑。
+侧栏的导航菜单在 `mkdocs.yml` 中编辑。
 
 ### 2. 推送部署网页
 
 我在 main 分支设置了 GitHub workflows，可以自动部署，因此不需要手动修改 gh-deploy 分支。
 
 所以很简单，在写作完成之后，运行 `git push origin main` 即可。
+
+没有设置 ssh 密钥的话要先设置，在电脑 (windows) 的 `C:\Users\你的用户名\.ssh` 路径找找有没有 `id_rsa.pub` 或者类似 `*.pub` 的文件，如果没有的话，打开 git-bash，输入 `ssh-keygen -t rsa -b 4096 -C "你的邮箱@example.com"` 生成一下，然后将 `.pub` 文件中的内容添加到 GitHub 账号中：[New SSH Key](https://github.com/settings/keys)
