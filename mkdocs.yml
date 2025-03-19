@@ -42,5 +42,7 @@ nav:
       - 世界观: game/lore.md
       - 角色介绍: game/characters.md
       - 怪物: game/monsters.md
+  - 开发:
+      - 属性整理: dev/初步构想.md
       
 
