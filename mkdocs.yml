@@ -4,22 +4,11 @@ site_description: >-
   「寻寰」游戏设定站，为了更好的开发游戏而设定。
 
 markdown_extensions:
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.highlight
-  - pymdownx.details
-  - pymdownx.tasklist
-  - pymdownx.caret
-  - pymdownx.tilde
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.extra
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem
-  - pymdownx.keys
-  - attr_list
-  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 theme:
   name: material
