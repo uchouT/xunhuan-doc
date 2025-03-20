@@ -5,14 +5,14 @@
 ```mermaid
 flowchart TD
   Class
-  Character --> Class
-  Weapon --> Class
-  OtherClass(ToBeContinue...) --> Class
-  CharacterOnBattle --> Character
-  ProtagonistOnBattle --> CharacterOnBattle
-  Monster --> CharacterOnBattle
-  Protagonist --> Character
-  Player --> Protagonist
+  Class --> Character
+  Class --> Weapon
+  Class --> OtherClass(ToBeContinue...)
+  Character --> CharacterOnBattle
+  CharacterOnBattle --> ProtagonistOnBattle
+  CharacterOnBattle --> Monster
+  Character --> Protagonist
+  Protagonist --> Player
   
 ```
 
