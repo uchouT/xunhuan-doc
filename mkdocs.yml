@@ -3,6 +3,13 @@ site_url: https://blog.uchout.moe/xunhuan-doc/
 site_description: >-
   「寻寰」游戏设定站，为了更好的开发游戏而设定。
 
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 theme:
   name: material
   language: zh
@@ -42,5 +49,8 @@ nav:
       - 世界观: game/lore.md
       - 角色介绍: game/characters.md
       - 怪物: game/monsters.md
+  - 开发:
+      - 属性整理: dev/初步构想.md
+      - 类: dev/class.md
       
 
